@@ -18,10 +18,10 @@ public class PlatformerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
         // Set to Dynamic with gravity
         rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = 3f;
+        rb.gravityScale = 3f; 
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     
@@ -34,7 +34,7 @@ public class PlatformerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         
         // Jump input
-        if (Input.GetButtonDown("Jump")) //&& isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
