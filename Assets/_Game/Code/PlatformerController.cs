@@ -14,6 +14,11 @@ public class PlatformerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
+    private bool Guy = false;
+
+    GuyScript guyScript = new GuyScript();
+    
+
     
     void Start()
     {
@@ -27,14 +32,19 @@ public class PlatformerController : MonoBehaviour
     
     void Update()
     {
+        Guy = guyScript.guy;
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
         
         // Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        
+
         // Jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+        else if (Input.GetButtonDown("Jump") && Guy)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
