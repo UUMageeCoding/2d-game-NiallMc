@@ -12,7 +12,8 @@ public class GuyScript : MonoBehaviour
 
       Debug.Log("collided with " + collision.tag);
       if (collision.CompareTag("Player"))
-      {
+    {
+      guy = true;
         Destroy(gameObject);
       }
   }

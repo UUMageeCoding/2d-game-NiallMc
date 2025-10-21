@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class PlatformerController : MonoBehaviour
@@ -14,11 +15,9 @@ public class PlatformerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
-    private bool Guy = false;
 
-    GuyScript guyScript = new GuyScript();
+    private bool doubleJump = false;
     
-
     
     void Start()
     {
@@ -32,7 +31,6 @@ public class PlatformerController : MonoBehaviour
     
     void Update()
     {
-        Guy = guyScript.guy;
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
         
@@ -43,11 +41,14 @@ public class PlatformerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            doubleJump = true;
         }
-        else if (Input.GetButtonDown("Jump") && Guy)
+        else if (Input.GetButtonDown("Jump") && doubleJump)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            doubleJump = false;
         }
+
     }
     
     void FixedUpdate()
