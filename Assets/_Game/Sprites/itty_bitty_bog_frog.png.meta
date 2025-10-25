@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      itty_bitty_bog_frog_0: -3285436122507467379
+      itty_bitty_bog_frog_1: -5452509479413031338
+      itty_bitty_bog_frog_10: -5295331702367295709
+      itty_bitty_bog_frog_11: -7467278376435378462
+      itty_bitty_bog_frog_12: 6046945186451273948
+      itty_bitty_bog_frog_13: 4555751723971890771
+      itty_bitty_bog_frog_14: -6230154481026010197
+      itty_bitty_bog_frog_15: -7687322248892142506
+      itty_bitty_bog_frog_2: 5352481941026818376
+      itty_bitty_bog_frog_3: -6879472756206375444
+      itty_bitty_bog_frog_4: -7006741668990273050
+      itty_bitty_bog_frog_5: 7946525321888590530
+      itty_bitty_bog_frog_6: -3548288463840865485
+      itty_bitty_bog_frog_7: 545210909372370324
+      itty_bitty_bog_frog_8: 5865535781639575134
+      itty_bitty_bog_frog_9: 7073598999260288454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
