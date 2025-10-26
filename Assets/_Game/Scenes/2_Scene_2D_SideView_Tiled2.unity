@@ -511,6 +511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b955f61db1cee4f8d46dc951a0ef31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
+  Playerhealth: 0
+  isDead: 0
 --- !u!1 &274612497
 GameObject:
   m_ObjectHideFlags: 0
@@ -42050,7 +42053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80347c6d2ca9dea49984cf0de2292ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guy: 0
+  damage: 25
+  playerH: {fileID: 260022759}
 --- !u!61 &1311171466
 BoxCollider2D:
   m_ObjectHideFlags: 0

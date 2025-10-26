@@ -12,21 +12,23 @@ public class PlayerHealth : MonoBehaviour
     {
         Playerhealth = MaxHealth;
     }
-    public void takeDamage (int damage)
+    public void TakeDamage (int damage)
     {
         Playerhealth -= damage;
+        if (Playerhealth <= 0 && !isDead)
+        {
+            isDead = true;
+            Destroy(gameObject);
+            //gameObject.setactive(false);
+            //gameManager.gameOver();
+            Debug.Log("Dead");
+            
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Playerhealth <= 0 && !isDead)
-        {
-            isDead =true;
-            //gameObject.setactive(false);
-            //gameManager.gameOver();
-            Debug.Log("Dead");
-
-        }
+        
     }
 }
