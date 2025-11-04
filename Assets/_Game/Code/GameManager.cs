@@ -4,20 +4,46 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private static GameManager _instance;
+
+
+  public static GameManager Instance
+
+  {
+
+    get { return _instance; }
+
+  }
+
+    void Awake()
+
     {
-        
+
+        // Ensure only one instance exists
+
+        if (_instance == null)
+
+        {
+
+            _instance = this;
+
+            DontDestroyOnLoad(gameObject);
+
+        }
+
+        else
+
+        {
+
+            Destroy(gameObject);
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    
     public void sceneChange(String scene)
     {
         SceneManager.LoadScene(scene);
     }
+    
+    
 }

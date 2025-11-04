@@ -9,7 +9,7 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         gameManager = new GameManager();
-        scene = "2_Scene_2D_SideView_Tiled2";
+        scene = "TileMap_Castle_Scene";
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

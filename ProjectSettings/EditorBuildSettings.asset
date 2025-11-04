@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/TileMap_Scene.unity
     guid: d888784162cfef0498a0db71ebbd4b53
   - enabled: 1
-    path: Assets/_Game/Scenes/2_Scene_2D_SideView_Tiled2.unity
-    guid: 9421a66c7e4be3041abe8aa28ef1ba23
+    path: Assets/_Game/Scenes/TileMap_Castle_Scene.unity
+    guid: 60a5960f498d9e441a0c013dd0162208
+  - enabled: 1
+    path: Assets/_Game/Scenes/TileMap_Castle_dungeon_Scene.unity
+    guid: acbbf1ddf87c0f249952765799e3df71
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
