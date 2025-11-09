@@ -4,6 +4,7 @@ public class EnemyScript : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 3f;
+     [SerializeField] private float health, maxHealth = 3f;
 
     private Rigidbody2D rb;
     private EnemyAwarenessScript eas;
@@ -17,6 +18,7 @@ public class EnemyScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         eas = GetComponent<EnemyAwarenessScript>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -27,6 +29,17 @@ public class EnemyScript : MonoBehaviour
             Vector2 newPosition = rb.position + eas.playerDirection * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
         }
-        
+
     }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+    
 }

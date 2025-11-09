@@ -5,9 +5,9 @@ using UnityEngine.UIElements;
 
 public class GuyScript : MonoBehaviour
 {
-  public int damage = 25;
+  public int damage;
 
-  public PlayerHealth playerH;
+  public PlayerHealth playerHealth;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void OnTriggerEnter2D(Collider2D collision)
@@ -15,9 +15,9 @@ public class GuyScript : MonoBehaviour
     
       Debug.Log("collided with " + collision.tag);
       if (collision.CompareTag("Player"))
-      {
-        playerH.TakeDamage(damage);
+    {
+      playerHealth.TakeDamage(damage);
         //Destroy(gameObject);
-      }
+    }
   }
 }
