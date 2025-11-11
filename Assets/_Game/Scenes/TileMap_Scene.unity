@@ -81515,7 +81515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1992691865
 Transform:
   m_ObjectHideFlags: 0
@@ -81576,7 +81576,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.12649809, b: 0.12649809, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81650,7 +81650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1
   enemyScript: {fileID: 992711049}
-  playerController_TopDown: {fileID: 953870691}
 --- !u!1 &2045328101
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,16 +58,6 @@ public class PlayerController_TopDown : MonoBehaviour
             vector3 = Vector3.left * moveInput.x + Vector3.down * moveInput.y;
             Aim.rotation = quaternion.LookRotation(Vector3.forward, vector3);
         }
-        if (knockback)
-        {
-            rb.AddForce(newPosition * -500f);
-            knockback = false;
-        }
         rb.MovePosition(newPosition);
-    }
-    public void Knockback()
-    {
-        knockback = true;
-        rb.AddForce(newPosition * -500f);
     }
 }
