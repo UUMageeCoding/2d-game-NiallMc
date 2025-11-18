@@ -4,7 +4,7 @@ public class EnemyScript : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private float health, maxHealth = 3f;
+    [SerializeField] private float health, maxHealth = 5f;
     [SerializeField] private bool moveX, moveY;
 
     private Rigidbody2D rb;

@@ -4,8 +4,9 @@ public class PlayerAttackScript : MonoBehaviour
 {
     public GameObject melee;
     bool isAttacking = false;
-    float attackDuration = 0.9f;
+    float attackDuration = 3f;
     float attackTimer = 0f;
+    
 
 
     void Update()
@@ -18,6 +19,7 @@ public class PlayerAttackScript : MonoBehaviour
         {
             melee.SetActive(false);
             isAttacking = false;
+            WeaponScript.Instance.CanAttack = true;
         }
         if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.E))
         {

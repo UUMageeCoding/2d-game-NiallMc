@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DungeonDoorScript : MonoBehaviour
 {
@@ -12,6 +13,6 @@ public class DungeonDoorScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.sceneChange(scene);
+        GameManager.Instance.sceneChange(scene);
     }
 }

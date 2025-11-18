@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-   public  string scene;
+   public string scene;
 
-    GameManager gameManager;
+    // GameManager gameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,8 +13,8 @@ public class DoorScript : MonoBehaviour
         scene = "TileMap_Castle_Scene";
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.sceneChange(scene);
+        GameManager.Instance.sceneChange(scene);
     }
 }
