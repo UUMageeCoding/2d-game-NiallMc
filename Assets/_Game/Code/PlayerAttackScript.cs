@@ -6,7 +6,12 @@ public class PlayerAttackScript : MonoBehaviour
     bool isAttacking = false;
     float attackDuration = 3f;
     float attackTimer = 0f;
-    
+
+    public Transform Aim;
+    public GameObject bullet;
+    public float fireForce = 10f;
+    float shootCooldown = 0.25f;
+    float shootTimer = 0.5f;
 
 
     void Update()
@@ -21,20 +26,40 @@ public class PlayerAttackScript : MonoBehaviour
             isAttacking = false;
             WeaponScript.Instance.CanAttack = true;
         }
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.E))
+        shootTimer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButton(0))
         {
             if (isAttacking == false)
             {
-                onAttack();
+                OnAttack();
             }
 
         }
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetMouseButton(1))
+        {
+            if (isAttacking == false)
+            {
+                OnShoot();
+            }
+            
+        }
+        
     }
 
-    void onAttack()
+    void OnAttack()
     {
         melee.SetActive(true);
         isAttacking = true;
 
+    }
+    void OnShoot()
+    {
+        if (shootTimer > shootCooldown)
+        {
+            shootTimer = 0;
+            GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
+            intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
+            Destroy(intBullet, 2f);
+        }
     }
 }
