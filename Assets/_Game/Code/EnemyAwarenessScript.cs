@@ -5,8 +5,11 @@ public class EnemyAwarenessScript : MonoBehaviour
 {
     [SerializeField] private float PlayerAwarenessDistance;
     [SerializeField] private Transform player;
+    [SerializeField] public float playerAttackDistace;
     public bool awareOfPlayer;
+    public bool attackPlayer;
     public Vector2 playerDirection;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +34,14 @@ public class EnemyAwarenessScript : MonoBehaviour
         else
         {
             awareOfPlayer = false;
+        }
+        if (enemyToPlayerVector.magnitude <= playerAttackDistace)
+        {
+            attackPlayer = true;
+        }
+        else
+        {
+            attackPlayer = false;
         }
     }
 }

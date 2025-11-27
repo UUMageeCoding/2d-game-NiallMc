@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+    string respawnScene;
 
 
   public static GameManager Instance
@@ -44,6 +45,24 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
-    
+
+    public int playerhealth = 10;
+
+    public void PlayerHealth(int damage)
+    {
+        playerhealth += damage;
+        if (playerhealth <= 0)
+        {
+            respawnScene = SceneManager.GetActiveScene().name;
+            Debug.Log(respawnScene);
+            sceneChange(respawnScene);
+
+            //Application.Quit();
+        }
+    }
+    public int healthcheck()
+    {
+        return playerhealth;
+    }
     
 }

@@ -119,6 +119,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16902523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4273320147840014848, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+  m_PrefabInstance: {fileID: 131835132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &131835132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436192635828259264, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273320147840014848, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: m_Name
+      value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676067630414777594, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
+      propertyPath: Door
+      value: 
+      objectReference: {fileID: 962124296}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58f1442155248b341ade9e4e20327a8d, type: 3}
 --- !u!1 &176327612
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +234,7 @@ MonoBehaviour:
   Damage: 1
   enemyScript: {fileID: 0}
   CanAttack: 1
+  Door: {fileID: 962124296}
 --- !u!60 &176327615
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -315,6 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368194467}
   - component: {fileID: 368194466}
+  - component: {fileID: 368194468}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -352,6 +420,21 @@ Transform:
   - {fileID: 962124297}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368194468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368194465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e0463687e04e04491372bef1eebbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 962124296}
+  timer: 0
+  delay: 10
 --- !u!1 &419585697
 GameObject:
   m_ObjectHideFlags: 0
@@ -38257,6 +38340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   melee: {fileID: 176327612}
+  Aim: {fileID: 292014445}
+  bullet: {fileID: 16902523}
+  fireForce: 10
 --- !u!114 &1362692688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68857,3 +68943,4 @@ SceneRoots:
   - {fileID: 368194467}
   - {fileID: 1362692686}
   - {fileID: 1454907154}
+  - {fileID: 131835132}

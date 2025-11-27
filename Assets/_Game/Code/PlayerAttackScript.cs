@@ -1,10 +1,11 @@
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlayerAttackScript : MonoBehaviour
 {
     public GameObject melee;
     bool isAttacking = false;
-    float attackDuration = 3f;
+    float attackDuration = 1f;
     float attackTimer = 0f;
 
     public Transform Aim;
@@ -12,6 +13,7 @@ public class PlayerAttackScript : MonoBehaviour
     public float fireForce = 10f;
     float shootCooldown = 0.25f;
     float shootTimer = 0.5f;
+    WeaponScript weaponScript;
 
 
     void Update()
