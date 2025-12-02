@@ -46,13 +46,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public int playerhealth = 10;
+    public int playerhealth = 12;
 
     public void PlayerHealth(int damage)
     {
+        //calculates player health
         playerhealth += damage;
         if (playerhealth <= 0)
         {
+            //respawns the player at the start of the current scene
             respawnScene = SceneManager.GetActiveScene().name;
             Debug.Log(respawnScene);
             sceneChange(respawnScene);

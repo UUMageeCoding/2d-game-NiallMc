@@ -10,7 +10,8 @@ public class DungeonDoorScript : MonoBehaviour
     {
         scene = "TileMap_Castle_dungeon_Scene";
     }
-
+    
+    //changes scene
     void OnTriggerEnter2D(Collider2D collision)
     {
         GameManager.Instance.sceneChange(scene);

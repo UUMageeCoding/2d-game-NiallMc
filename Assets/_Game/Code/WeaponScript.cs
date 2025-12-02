@@ -8,6 +8,8 @@ public class WeaponScript : MonoBehaviour
     public bool CanAttack = false;
     public GameObject Door;
 
+    public BossScript bossScript;
+
 
   public static WeaponScript Instance
 
@@ -43,13 +45,15 @@ public class WeaponScript : MonoBehaviour
     }
     void Start()
     {
-        enemyScript = FindAnyObjectByType<EnemyScript>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && (CanAttack = true))
+        GameObject objectCollided = collision.gameObject;
+        if (objectCollided.CompareTag("Enemy") && (CanAttack = true))
         {
+            enemyScript = objectCollided.GetComponent<EnemyScript>();
             enemyScript.TakeDamage(Damage);
             CanAttack = false;
         }
@@ -58,6 +62,11 @@ public class WeaponScript : MonoBehaviour
             Door.SetActive(false);
             CanAttack = false;
 
+        }
+        if (collision.CompareTag("Boss") && (CanAttack = true))
+        {
+            bossScript.TakeDamage(Damage);
+            CanAttack = false;
         }
     }
 }

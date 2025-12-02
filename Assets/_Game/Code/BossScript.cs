@@ -1,23 +1,15 @@
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyScript : MonoBehaviour
+public class BossScript : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private float health, maxHealth = 12f;
-    [SerializeField] private bool moveX, moveY;
-    [SerializeField]public int damage = -3;
-
+    [SerializeField] private float health, maxHealth = 20f;
+    [SerializeField] public int damage = -4;
     private Rigidbody2D rb;
     private EnemyAwarenessScript eas;
-    private Vector2 pd;
-
     public float attackTimer = 0f;
     public float attackLenght = 5f;
-
-    
-    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,7 +36,6 @@ public class EnemyScript : MonoBehaviour
                 attackTimer = 0;
             }
         }
-
     }
     public void TakeDamage(int damage)
     {

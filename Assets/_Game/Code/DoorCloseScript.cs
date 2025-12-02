@@ -15,8 +15,7 @@ public class DoorCloseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+        //closes the door after a set delay
         if (Door.activeSelf == false)
         {
             timer += Time.deltaTime;

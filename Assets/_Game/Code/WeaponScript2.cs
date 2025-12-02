@@ -5,6 +5,7 @@ public class WeaponScript2 : MonoBehaviour
     public GameObject Door;
     public int Damage = 3;
     public EnemyScript enemyScript;
+    public BossScript bossScript;
     public bool CanAttack = true;
     void Start()
     {
@@ -21,6 +22,11 @@ public class WeaponScript2 : MonoBehaviour
         if (collision.CompareTag("Door") && (CanAttack = true))
         {
             Door.SetActive(false);
+        }
+        if (collision.CompareTag("Boss") && (CanAttack = true))
+        {
+            bossScript.TakeDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

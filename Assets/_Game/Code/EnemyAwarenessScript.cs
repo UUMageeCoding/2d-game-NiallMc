@@ -14,6 +14,7 @@ public class EnemyAwarenessScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //finds the player location via the player controller script
         player = Object.FindFirstObjectByType<PlayerController_TopDown>().transform;
         
     }
@@ -21,9 +22,11 @@ public class EnemyAwarenessScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // finds the player durection an range 
         Vector2 enemyToPlayerVector = player.position - transform.position;
         playerDirection = enemyToPlayerVector.normalized;
-
+        
+        //checks distance to player
         if (enemyToPlayerVector.magnitude <= PlayerAwarenessDistance)
         {
             awareOfPlayer = true;
