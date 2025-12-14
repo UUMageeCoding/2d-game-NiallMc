@@ -57,14 +57,13 @@ public class WeaponScript : MonoBehaviour
             enemyScript.TakeDamage(Damage);
             CanAttack = false;
         }
-        if (collision.CompareTag("Door") && (CanAttack = true))
+        if (objectCollided.CompareTag("Door") && (CanAttack = true))
         {
-            Door = Door.GetComponent<GameObject>();
-            Door.SetActive(false);
+            objectCollided.SetActive(false);
             CanAttack = false;
 
         }
-        if (collision.CompareTag("Boss") && (CanAttack = true))
+        if (objectCollided.CompareTag("Boss") && (CanAttack = true))
         {
             bossScript.TakeDamage(Damage);
             CanAttack = false;

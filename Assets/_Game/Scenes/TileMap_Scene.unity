@@ -81425,6 +81425,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -420.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -423
+      objectReference: {fileID: 0}
     - target: {fileID: 5270072795667666408, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -81441,6 +81449,14 @@ PrefabInstance:
       propertyPath: enemyScript
       value: 
       objectReference: {fileID: 992711049}
+    - target: {fileID: 8417630324226423589, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417630324226423589, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 89
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

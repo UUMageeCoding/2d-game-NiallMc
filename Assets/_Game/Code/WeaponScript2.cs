@@ -14,19 +14,24 @@ public class WeaponScript2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && (CanAttack = true))
+        GameObject objectCollided = collision.gameObject;
+        if (objectCollided.CompareTag("Enemy") && (CanAttack = true))
         {
+            enemyScript = objectCollided.GetComponent<EnemyScript>();
             enemyScript.TakeDamage(Damage);
-            Destroy(gameObject);
+            CanAttack = false;
         }
-        if (collision.CompareTag("Door") && (CanAttack = true))
+        if (objectCollided.CompareTag("Door") && (CanAttack = true))
         {
-            Door.SetActive(false);
+            objectCollided.SetActive(false);
+            CanAttack = false;
+
         }
-        if (collision.CompareTag("Boss") && (CanAttack = true))
+        if (objectCollided.CompareTag("Boss") && (CanAttack = true))
         {
+
             bossScript.TakeDamage(Damage);
-            Destroy(gameObject);
+            CanAttack = false;
         }
     }
 }

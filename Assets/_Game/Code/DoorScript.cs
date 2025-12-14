@@ -16,6 +16,9 @@ public class DoorScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.sceneChange(scene);
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.Instance.sceneChange(scene);
+        }
     }
 }
