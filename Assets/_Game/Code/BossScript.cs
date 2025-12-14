@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class BossScript : MonoBehaviour
 {
     [Header("Movement Settings")]

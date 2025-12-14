@@ -59,6 +59,7 @@ public class WeaponScript : MonoBehaviour
         }
         if (collision.CompareTag("Door") && (CanAttack = true))
         {
+            Door = Door.GetComponent<GameObject>();
             Door.SetActive(false);
             CanAttack = false;
 
