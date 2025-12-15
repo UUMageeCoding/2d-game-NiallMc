@@ -38988,6 +38988,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -39719872652690402, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c26990667d4fbeb4ab62416c92b41c75, type: 2}
     - target: {fileID: 1718107500063856269, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.95
@@ -69864,7 +69868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerAwarenessDistance: 12
   player: {fileID: 2090449429}
-  playerAttackDistace: 7
+  playerAttackDistace: 3
   awareOfPlayer: 0
   attackPlayer: 0
   playerDirection: {x: 0, y: 0}
@@ -69885,7 +69889,7 @@ MonoBehaviour:
   maxHealth: 30
   damage: -5
   attackTimer: 0
-  attackLenght: 3
+  attackLenght: 4
 --- !u!58 &1811795868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -70356,6 +70360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -39719872652690402, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c26990667d4fbeb4ab62416c92b41c75, type: 2}
     - target: {fileID: 1718107500063856269, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.47288227

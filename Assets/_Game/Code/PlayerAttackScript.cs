@@ -22,7 +22,7 @@ public class PlayerAttackScript : MonoBehaviour
         {
             attackTimer += Time.deltaTime;
         }
-        if (attackTimer >= attackDuration)
+        if ((attackTimer >= attackDuration))
         {
             melee.SetActive(false);
             isAttacking = false;
