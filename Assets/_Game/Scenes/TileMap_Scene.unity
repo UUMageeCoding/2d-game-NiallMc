@@ -81427,11 +81427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -420.51
+      value: -925
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -423
+      value: -651
       objectReference: {fileID: 0}
     - target: {fileID: 5270072795667666408, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_FlipX

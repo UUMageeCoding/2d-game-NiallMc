@@ -8633,11 +8633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -398
+      value: -927
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -414
+      value: -645
       objectReference: {fileID: 0}
     - target: {fileID: 7202232149277800724, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: Door

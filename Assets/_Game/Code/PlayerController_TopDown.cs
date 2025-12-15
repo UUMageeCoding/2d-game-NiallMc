@@ -17,8 +17,6 @@ public class PlayerController_TopDown : MonoBehaviour
     Vector2 newPosition;
     public Transform Aim;
     bool isWalking = false;
-    bool isUp = false;
-    bool isDown = false;
 
     SpriteRenderer sr;
     Animator an;
@@ -65,7 +63,15 @@ public class PlayerController_TopDown : MonoBehaviour
             vector3 = Vector3.left * moveInput.x + Vector3.down * moveInput.y;
             Aim.rotation = quaternion.LookRotation(Vector3.forward, vector3);
             an.SetBool("IsWalking", true);
-            if (moveInput.y > 0)
+            if ((moveInput.x < 0) && (moveInput.y == 0))
+            {
+                sr.flipX = true;
+            }
+            else if ((moveInput.x > 0) && (moveInput.y == 0))
+            {
+                sr.flipX = false;
+            }
+            else if (moveInput.y > 0)
             {
                 an.SetBool("IsUp", true);
                 an.SetBool("IsDown", false);
@@ -76,14 +82,7 @@ public class PlayerController_TopDown : MonoBehaviour
                 an.SetBool("IsUp", false);
             }
 
-            if ((moveInput.x < 0) && (moveInput.y == 0))
-            {
-                sr.flipX = true;
-            }
-            else if ((moveInput.x > 0) && (moveInput.y == 0))
-            {
-                sr.flipX = false;
-            }
+            
         }
         else if (isWalking == false)
         {

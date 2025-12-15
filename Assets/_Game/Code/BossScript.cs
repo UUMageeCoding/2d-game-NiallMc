@@ -9,6 +9,8 @@ public class BossScript : MonoBehaviour
     [SerializeField] public int damage = -4;
     private Rigidbody2D rb;
     private EnemyAwarenessScript eas;
+    SpriteRenderer sr;
+    Animator an;
     public float attackTimer = 0f;
     public float attackLenght = 5f;
 
@@ -17,6 +19,8 @@ public class BossScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         eas = GetComponent<EnemyAwarenessScript>();
+        an = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         health = maxHealth;
     }
 
@@ -26,6 +30,33 @@ public class BossScript : MonoBehaviour
         if (eas.awareOfPlayer)
         {
             Vector2 newPosition = rb.position + eas.playerDirection * moveSpeed * Time.fixedDeltaTime;
+            if (newPosition == rb.position)
+            {
+                an.SetBool("IsWalking", false);
+            }
+            else
+            {
+                an.SetBool("IsWalking", true);
+            }
+            if (newPosition.y > rb.position.y)
+            {
+                an.SetBool("IsUp", true);
+                an.SetBool("IsDown", false);
+            }
+            else if (newPosition.y < rb.position.y)
+            {
+                an.SetBool("IsUp", false);
+                an.SetBool("IsDown", true);
+            }
+            if ((newPosition.x < 0) && (newPosition.y == 0))
+            {
+                sr.flipX = true;
+            }
+            else if ((newPosition.x > 0) && (newPosition.y == 0))
+            {
+                sr.flipX = false;
+            }
+
             rb.MovePosition(newPosition);
         }
         if (eas.attackPlayer)
