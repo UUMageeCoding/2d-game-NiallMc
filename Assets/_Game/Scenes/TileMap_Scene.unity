@@ -81280,6 +81280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57c83d46acce444389fdabf7b5ad219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCollected: 0
+  inputs: 1
   playerhealth: 12
 --- !u!4 &2045328103
 Transform:
@@ -81360,6 +81362,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: attackLenght
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3722020750898092056, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -81427,11 +81433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -925
+      value: -784
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -651
+      value: -747
       objectReference: {fileID: 0}
     - target: {fileID: 5270072795667666408, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_FlipX

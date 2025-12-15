@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyCollected: 0
+  inputs: 1
   playerhealth: 12
 --- !u!4 &141833432
 Transform:
@@ -1457,81 +1458,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &200373842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 200373843}
-  - component: {fileID: 200373845}
-  - component: {fileID: 200373844}
-  m_Layer: 5
-  m_Name: DarrylWhite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &200373843
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200373842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1086758275}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &200373844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200373842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &200373845
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200373842}
-  m_CullTransparentMesh: 1
 --- !u!1 &204033266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1651,10 @@ PrefabInstance:
     - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: maxHealth
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: attackLenght
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3722020750898092056, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_Name
@@ -8461,9 +8391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   D: {fileID: 431779171}
-  D2: {fileID: 200373842}
   d: {fileID: 431779173}
-  d2: {fileID: 200373844}
 --- !u!61 &1020846117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8634,11 +8562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -927
+      value: -790.2
       objectReference: {fileID: 0}
     - target: {fileID: 2735808387929295555, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -645
+      value: -748.5
       objectReference: {fileID: 0}
     - target: {fileID: 7202232149277800724, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       propertyPath: Door
@@ -8647,9 +8575,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2439450767590668282, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 200373843}
     - targetCorrespondingSourceObject: {fileID: 2439450767590668282, guid: 8918832b3d5c9594da2cc1fa85b4a1ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 431779172}
@@ -8724,6 +8649,10 @@ PrefabInstance:
     - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: maxHealth
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: attackLenght
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3722020750898092056, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_Name

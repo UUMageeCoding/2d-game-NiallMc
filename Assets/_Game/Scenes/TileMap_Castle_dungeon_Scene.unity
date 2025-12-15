@@ -37859,7 +37859,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -37902,26 +37902,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 13, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -37972,26 +37952,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 33, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 38, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -38169,8 +38129,8 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: 4072ddb71289bbf4f951eeba96b8fdce, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 8d29a079743572f4da2a3aa04038725d, type: 2}
   - m_RefCount: 0
@@ -38188,8 +38148,8 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0ea4ac46e9b6cfb488b1013d8c3a6c35, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 4
-    m_Data: {fileID: -2116594701, guid: c113debc3b1357b4dafcf8dd8a9d3ec6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -1559475195, guid: c113debc3b1357b4dafcf8dd8a9d3ec6, type: 3}
   - m_RefCount: 0
@@ -38207,7 +38167,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -50615268, guid: bc4e37fced2285b4cb53b9acf610b633, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 29
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -38226,7 +38186,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 29
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -39068,6 +39028,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: attackLenght
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3722020750898092056, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -39176,7 +39140,7 @@ GameObject:
   - component: {fileID: 1500477034}
   - component: {fileID: 1500477033}
   m_Layer: 5
-  m_Name: White
+  m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69898,9 +69862,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6a3104325a80a4fb4b987b9f2eefc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAwarenessDistance: 7
+  PlayerAwarenessDistance: 12
   player: {fileID: 2090449429}
-  playerAttackDistace: 2
+  playerAttackDistace: 7
   awareOfPlayer: 0
   attackPlayer: 0
   playerDirection: {x: 0, y: 0}
@@ -69918,10 +69882,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   health: 0
-  maxHealth: 20
-  damage: -4
+  maxHealth: 30
+  damage: -5
   attackTimer: 0
-  attackLenght: 5
+  attackLenght: 3
 --- !u!58 &1811795868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -70049,7 +70013,7 @@ Transform:
   m_GameObject: {fileID: 1811795865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6, y: 56.64, z: 0}
+  m_LocalPosition: {x: 12.09, y: 58.74, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70379,8 +70343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndText: {fileID: 49807358}
-  White: {fileID: 1500477031}
-  white: {fileID: 0}
+  B: {fileID: 1500477031}
+  BImage: {fileID: 0}
+  time2: 5
+  timer: 0
+  TimerStart: 0
 --- !u!1001 &213174317459761861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70437,9 +70404,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2490207164884213759, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: attackLenght
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3722020750898092056, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231471690011177419, guid: 411c90c30a69eaa4eae1dd49d8966072, type: 3}
+      propertyPath: PlayerAwarenessDistance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

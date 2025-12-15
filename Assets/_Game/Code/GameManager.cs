@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -67,6 +68,11 @@ public class GameManager : MonoBehaviour
     public int healthcheck()
     {
         return playerhealth;
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
     }
     
 }

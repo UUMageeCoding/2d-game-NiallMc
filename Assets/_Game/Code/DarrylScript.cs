@@ -4,15 +4,14 @@ using UnityEngine.UI;
 public class DarrylScript : MonoBehaviour
 {
     public GameObject D;
-    public GameObject D2;
     public Image d;
-    public Image d2;
+
     float alpha = 0f;
     float time = 2f;
     void Start()
     {
         d = D.GetComponent<Image>();
-        d2 = D2.GetComponent<Image>();
+       
     }
     
     //changes scene
@@ -22,9 +21,9 @@ public class DarrylScript : MonoBehaviour
         if (objectCollided.CompareTag("Player") )
         {
             D.SetActive(true);
-            D2.SetActive(true);
+          
             d.CrossFadeAlpha(alpha, time, false); 
-            d2.CrossFadeAlpha(alpha, time, false); 
+            
         }
         
 

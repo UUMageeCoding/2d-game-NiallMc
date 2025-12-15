@@ -83,17 +83,18 @@ public class PlayerController_TopDown : MonoBehaviour
             vector3 = Vector3.left * moveInput.x + Vector3.down * moveInput.y;
             Aim.rotation = quaternion.LookRotation(Vector3.forward, vector3);
             an.SetBool("IsWalking", true);
+
             if ((moveInput.x < 0) && (moveInput.y == 0))
             {
                 sr.flipX = true;
                 an.SetBool("IsUp", false);
-                an.SetBool("IsDown", true);
+                an.SetBool("IsDown", false);
             }
             else if ((moveInput.x > 0) && (moveInput.y == 0))
             {
                 sr.flipX = false;
                 an.SetBool("IsUp", false);
-                an.SetBool("IsDown", true);
+                an.SetBool("IsDown", false);
             }
             else if (moveInput.y > 0)
             {
@@ -105,6 +106,7 @@ public class PlayerController_TopDown : MonoBehaviour
                 an.SetBool("IsDown", true);
                 an.SetBool("IsUp", false);
             }
+            
 
             
         }
