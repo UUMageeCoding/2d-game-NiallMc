@@ -5,13 +5,11 @@ public class EndGameScript : MonoBehaviour
 {
     public GameObject EndText;
     public GameObject B;
-    public Image BImage;
     public float time2 = 10f;
     public float timer = 0f;
     public bool TimerStart = false;
     void Start()
     {
-        BImage = B.GetComponent<Image>();
     }
     void Update()
     {
@@ -38,12 +36,7 @@ public class EndGameScript : MonoBehaviour
             //Debug.Log("if Start");
             GameManager.Instance.inputs = false;
             EndText.SetActive(true);
-            B.SetActive(true);
-            for (int i = 0; i < 100; i++)
-            {
-                BImage.CrossFadeAlpha(1f, 3f, false);
-            }
-                
+            B.SetActive(true);    
             TimerStart = true;
         }
     }
