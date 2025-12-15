@@ -21,7 +21,7 @@ public class WeaponScript2 : MonoBehaviour
             enemyScript.TakeDamage(Damage);
             CanAttack = false;
         }
-        if (objectCollided.CompareTag("Door") && (CanAttack = true))
+        if (objectCollided.CompareTag("Door") && (CanAttack = true) && (GameManager.Instance.keyCollected == true))
         {
             objectCollided.SetActive(false);
             CanAttack = false;
@@ -29,9 +29,15 @@ public class WeaponScript2 : MonoBehaviour
         }
         if (objectCollided.CompareTag("Boss") && (CanAttack = true))
         {
-
+            bossScript = objectCollided.GetComponent<BossScript>();
             bossScript.TakeDamage(Damage);
             CanAttack = false;
+        }
+        if (objectCollided.CompareTag("Door2") && (CanAttack = true))
+        {
+            objectCollided.SetActive(false);
+            CanAttack = false;
+
         }
     }
 }

@@ -30,8 +30,19 @@ public class PlayerController_TopDown : MonoBehaviour
     
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        float moveY = 0f;
+        float moveX = 0f;
+        if (GameManager.Instance.inputs == true)
+        {
+            moveX = Input.GetAxisRaw("Horizontal");
+            moveY = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            moveY = 0f;
+            moveX = 0f;
+        }
+
 
 
         if ((moveX == 0 && moveY == 0) && (moveInput.x != 0 || moveInput.y != 0))
@@ -40,15 +51,23 @@ public class PlayerController_TopDown : MonoBehaviour
             lastMoveDirection = moveInput;
             vector3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
             Aim.rotation = quaternion.LookRotation(Vector3.forward, vector3);
-            
+
         }
         else if (moveX != 0 || moveY != 0)
         {
             isWalking = true;
         }
         // Get input
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        if (GameManager.Instance.inputs == true)
+        {
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            moveInput.x = 0;
+            moveInput.y = 0;
+        }
 
         // Normalise diagonal movement
         moveInput.Normalize();
@@ -56,6 +75,7 @@ public class PlayerController_TopDown : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         // Move using Rigidbody2D.MovePosition
         newPosition = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
         if (isWalking)
@@ -66,10 +86,14 @@ public class PlayerController_TopDown : MonoBehaviour
             if ((moveInput.x < 0) && (moveInput.y == 0))
             {
                 sr.flipX = true;
+                an.SetBool("IsUp", false);
+                an.SetBool("IsDown", true);
             }
             else if ((moveInput.x > 0) && (moveInput.y == 0))
             {
                 sr.flipX = false;
+                an.SetBool("IsUp", false);
+                an.SetBool("IsDown", true);
             }
             else if (moveInput.y > 0)
             {

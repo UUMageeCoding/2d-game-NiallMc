@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Health
   - Boss
+  - Door2
   layers:
   - Default
   - TransparentFX

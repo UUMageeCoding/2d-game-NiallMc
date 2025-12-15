@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 73114418}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Door
+  m_TagString: Door2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57c83d46acce444389fdabf7b5ad219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCollected: 0
   playerhealth: 12
 --- !u!4 &141833432
 Transform:

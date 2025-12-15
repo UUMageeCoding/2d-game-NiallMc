@@ -51,10 +51,14 @@ public class BossScript : MonoBehaviour
             if ((newPosition.x < 0) && (newPosition.y == 0))
             {
                 sr.flipX = true;
+                an.SetBool("IsUp", false);
+                an.SetBool("IsDown", true);
             }
             else if ((newPosition.x > 0) && (newPosition.y == 0))
             {
                 sr.flipX = false;
+                an.SetBool("IsUp", false);
+                an.SetBool("IsDown", true);
             }
 
             rb.MovePosition(newPosition);

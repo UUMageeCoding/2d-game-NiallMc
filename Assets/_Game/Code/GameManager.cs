@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     string respawnScene;
+    public bool keyCollected = false;
+    public bool inputs = true;
 
 
   public static GameManager Instance
